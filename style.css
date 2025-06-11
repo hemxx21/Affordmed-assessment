@@ -1,219 +1,106 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #78ffd6, #007991);
-  min-height: 100vh;
+  background: linear-gradient(to right, #e9bada, #dea7b9);
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .container {
-  background: white;
-  padding: 30px;
+  background: linear-gradient(135deg, #e0b7b7, #f0f8ff);
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
   width: 90%;
   max-width: 600px;
-  animation: slideIn 1s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #007991;
+  margin-bottom: 25px;
+  color: #2e3d49;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-@media (min-width: 600px) {
-  .form-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .form-group:nth-child(3) {
-    grid-column: span 2;
-  }
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
 }
 
-.form-group input {
-  width: 100%;
+input {
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  transition: border-color 0.3s, background 0.3s;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
-.form-group input:hover,
-.form-group input:focus {
-  border-color: #007991;
-  background: #f0f9f9;
+input:focus {
+  border-color: #42a5f5;
+  outline: none;
+}
+
+input:hover {
+  border-color: #0288d1;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(2, 136, 209, 0.2);
+  transition: all 0.2s ease-in-out;
 }
 
 .submit-btn {
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 12px;
-  width: 100%;
-  background: #007991;
+  background-color: #0288d1;
   color: white;
-  font-size: 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .submit-btn:hover {
-  background: #005f73;
-  transform: scale(1.02);
+  background-color: #01579b;
+  transform: translateY(-2px);
 }
 
 .confirmation {
   margin-top: 20px;
-  padding: 15px;
-  border-radius: 6px;
-  background: #e0ffe0;
-  color: #004d00;
   text-align: center;
   font-weight: bold;
+  color: green;
 }
 
 .hidden {
   display: none;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #78ffd6, #007991);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 600px;
-  animation: slideIn 1s ease;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #007991;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .form-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .form-group:nth-child(3) {
-    grid-column: span 2;
-  }
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  transition: border-color 0.3s, background 0.3s;
-}
-
-.form-group input:hover,
-.form-group input:focus {
-  border-color: #007991;
-  background: #f0f9f9;
-}
-
-.submit-btn {
-  margin-top: 20px;
-  padding: 12px;
-  width: 100%;
-  background: #007991;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
-}
-
-.submit-btn:hover {
-  background: #005f73;
-  transform: scale(1.02);
-}
-
-.confirmation {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 6px;
-  background: #e0ffe0;
-  color: #004d00;
-  text-align: center;
-  font-weight: bold;
-}
-
-.hidden {
-  display: none;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    grid-template-columns: 1fr;
   }
 }
